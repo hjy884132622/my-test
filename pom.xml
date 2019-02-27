@@ -26,24 +26,31 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
+    <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20171018</version>
+    </dependency>
 
-  <build>
-    <finalName>my-test</finalName>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.tomcat.maven</groupId>
-          <artifactId>tomcat7-maven-plugin</artifactId>
-          <version>2.2</version>
-          <configuration>
-            <!--远程Tomcat的ip地址和端口号，注意远程Tomcat需要启动-->
-            <url>http://47.110.52.156:8080/manager/text</url>
-            <username>admin</username>
-            <password>admin123</password>
-            <update>true</update>
-            <path>/test</path>
-          </configuration>
-        </plugin>
-      </plugins>
-  </build>
+    </dependencies>
+    <build>
+        <finalName>my-test</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <!--远程Tomcat的ip地址和端口号，注意远程Tomcat需要启动-->
+                    <url>http://47.110.52.156:8080/manager/text</url>
+                    <username>admin</username>
+                    <password>admin123</password>
+                    <update>true</update>
+                    <path>/test</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
 </project>
